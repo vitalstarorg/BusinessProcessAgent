@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+    "settings": {
+        "python.pythonPath": "/Users/man/miniconda3/envs/py39/bin/python",
+        "editor.tabSize": 4,
+        "files.exclude": {
+            "**/__pycache__": true
+        }
+    }
+}

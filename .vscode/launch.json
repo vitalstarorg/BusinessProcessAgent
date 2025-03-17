@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "all tests",
+            "type": "debugpy", "request": "launch", "module": "pytest",
+            "args": [
+                "tests", "--maxfail=1", "--disable-warnings"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                 "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}/src/screener:${env:PYTHONPATH}"
+            }
+        },{
+            "name": "Hack",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "tests/test_hack.py",
+                "--maxfail=1",
+                "--disable-warnings"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }
+    ]
+}

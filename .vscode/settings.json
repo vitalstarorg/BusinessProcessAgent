@@ -1,0 +1,12 @@
+{
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/src"
+    ],
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/src"
+    ],
+    "python.envFile": "${workspaceFolder}/pyenv",
+    "python.defaultInterpreterPath": "/Users/man/miniconda3/envs/py39/bin/python"
+}
