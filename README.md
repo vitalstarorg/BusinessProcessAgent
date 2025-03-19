@@ -1,0 +1,3 @@
+# Business Process AI Agent Demo
+
+A _Proof-of-Concept_ demo showcasing how an **AI Agent** can assist with a hypothetical **Business Process** by intelligently researching for relevant information from multiple websites and distilling relevant information into a written report that can be used to guide human decision-making, and to produce aggregated data ready for ingesting into a structured database for future use and retrieval.
