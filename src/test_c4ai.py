@@ -7,8 +7,7 @@ from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig
 async def main():
     browser_config = BrowserConfig(
         headless=False,
-        # proxy="https=http://4a2c95f7e7dbafd7dee53c029bba07f9dc148f60:@api.zenrows.com:8001",
-        proxy="https=http://brd-customer-hl_b414dc3e-zone-datacenter_proxy1:e97biz27iakn@brd.superproxy.io:33335",
+        proxy="",
     )
     # async with AsyncWebCrawler() as crawler:
     async with AsyncWebCrawler(config=browser_config) as crawler:

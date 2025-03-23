@@ -1,9 +1,7 @@
 import asyncio
 from playwright.async_api import async_playwright
 
-AUTH = 'USER:PASS'
-SBR_WS_CDP = f'wss://brd-customer-hl_b414dc3e-zone-scraping_browser2:kxtjpvyk2pcv@brd.superproxy.io:9222'
-
+SBR_WS_CDP = f'wss://'
 
 async def run(pw):
     print(f'Connecting to Scraping Browser at {SBR_WS_CDP}')

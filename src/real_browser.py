@@ -15,12 +15,11 @@ async def main():
             _force_keep_browser_alive=True,
             browser_instance_path='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
             extra_browser_args=[
-                # '--profile-directory="Profile 3"',
-                # '--proxy-server="https=http://4a2c95f7e7dbafd7dee53c029bba07f9dc148f60:@api.zenrows.com:8001"'
-                # '--proxy-server="https=http://brd-customer-hl_b414dc3e-zone-datacenter_proxy1:e97biz27iakn@brd.superproxy.io:33335"',
+                # '--profile-directory="Default"',
+                # '--proxy-server="https=http://"
             ],
-            # cdp_url='wss://browser.zenrows.com?apikey=4a2c95f7e7dbafd7dee53c029bba07f9dc148f60&proxy_region=na',
-            # cdp_url='wss://brd-customer-hl_b414dc3e-zone-scraping_browser2:kxtjpvyk2pcv@brd.superproxy.io:9222',
+            # cdp_url='wss://'
+            # cdp_url='wss://'
             # new_context_config=BrowserContextConfig(
             #     minimum_wait_page_load_time=1.0,
             #     maximum_wait_page_load_time=7,
