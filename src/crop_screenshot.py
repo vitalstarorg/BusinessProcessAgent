@@ -9,7 +9,7 @@ def crop_top_left_quadrant(input_path, output_path):
     with Image.open(input_path) as img:
         # Get the image dimensions
         width, height = img.size
-        print(f"Original size: {width}x{height}")
+        # print(f"Original size: {width}x{height}")
 
         # Calculate half of width and height
         half_width = width // 2
@@ -23,7 +23,7 @@ def crop_top_left_quadrant(input_path, output_path):
 
         # Save the cropped image
         cropped_img.save(output_path)
-        print(f"Cropped image saved to {output_path}")
+        # print(f"Cropped image saved to {output_path}")
 
 
 input_fpath = Path(sys.argv[1])
