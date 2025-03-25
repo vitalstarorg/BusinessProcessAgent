@@ -5,12 +5,14 @@ import { ResearchResult } from '@/lib/types'
 
 interface RequestBody {
   company: string
+  companyLoc: string
+  type?: number
 }
 
 export async function POST(request: Request) {
   try {
     const body = await request.json() as RequestBody
-    const { company } = body
+    const { company, companyLoc, type = 1 } = body
 
     if (!company?.trim()) {
       return NextResponse.json<ResearchResult>(
@@ -19,7 +21,7 @@ export async function POST(request: Request) {
       )
     }
 
-    const data = await runPythonScript(company)
+    const data = await runPythonScript(company, companyLoc, type)
     return NextResponse.json<ResearchResult>(data)
   } catch (error) {
     console.error('API error:', error)
@@ -30,10 +32,10 @@ export async function POST(request: Request) {
   }
 }
 
-async function runPythonScript(company: string): Promise<ResearchResult> {
+async function runPythonScript(company: string, companyLoc: string, type: number): Promise<ResearchResult> {
   return new Promise((resolve, reject) => {
     const pythonScript = path.join(process.cwd(), 'research_company.py')
-    const pythonProcess = spawn('python3', [pythonScript, company])
+    const pythonProcess = spawn('python3', [pythonScript, company, companyLoc, type.toString()])
 
     let result = ''
     let error = ''
